@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/forecast.css">
 
-    <script src="js/api.js"></script>
-
 </head>
 <body>
     <div class="container container-table">
@@ -20,12 +18,15 @@
                     <div class="input-group">
                         <input type="text" class="form-control" id="location" placeholder="Location">
                         <span class="input-group-btn">
-                            <button class="btn btn-secondary" onclick="getWeather()" type="button">🌤 Show me the weather!️ ☔️</button>
+                            <button class="btn btn-secondary" id="forcast-button" type="button">🌤 Show me the weather!️ ☔️</button>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/api.js"></script>
 </body>
 </html>

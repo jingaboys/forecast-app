@@ -5,6 +5,8 @@
  *
  */
 
+$('#forcast-button').on('click', getWeather)
+
 function getWeather() {
     console.log("Show me some brownies...no no weather..yeah weather")
 }
