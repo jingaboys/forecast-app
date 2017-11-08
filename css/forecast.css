@@ -5,6 +5,11 @@ body {
 html, body, .container-table {
     height: 100%;
 }
+
+.content-container {
+	margin: 0 auto;
+}
+
 .container-table {
     display: table;
 }
