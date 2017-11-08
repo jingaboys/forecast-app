@@ -8,7 +8,7 @@
 function getWeather() {
     var suburb = document.getElementById("location").value;
     var locationUrl = `http://maps.googleapis.com/maps/api/geocode/json?address=${suburb}`;
-    var weatherUrlBase = `https://api.forecast.io/forecast/c729b061493463872cfdafd023e452c6`;
+    var weatherUrlBase = `https://api.darksky.net/forecast/c729b061493463872cfdafd023e452c6`;
 
     fetch(locationUrl).then((response) => {
         return response.json()
@@ -22,7 +22,7 @@ function getWeather() {
         }).then((dataAsJson) => {
             var forecastResult = document.getElementById("forecast-result")
             forecastResult.style.visibility = "visible"
-            forecastResult.innerHTML = `In ${suburb} (${mylocation.lat}, ${mylocation.lng}) the weather is ${dataAsJson.currently.summary} and the temperature is ${dataAsJson.currently.temperature} degrees Celcius.`
+            forecastResult.innerHTML = `In <strong>${suburb}</strong> (${mylocation.lat}, ${mylocation.lng}) the weather is <strong>${dataAsJson.currently.summary}</strong> and the temperature is <strong>${dataAsJson.currently.temperature}</strong> degrees Celsius.`
         })
     })
 }
