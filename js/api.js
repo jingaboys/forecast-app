@@ -1,12 +1,29 @@
 /**
- * Your forecast.io key: API_KEY
- * Your forecast URL: https://api.forecast.io/forecast
- * Your google maps URL: http://maps.googleapis.com/maps/api/geocode/json?address=
- *
+ * Dummy implementation
  */
 
-$('#forcast-button').on('click', getWeather)
-
 function getWeather() {
-    console.log("Show me some brownies...no no weather..yeah weather")
+    var location = document.getElementById("location").value;
+    /*
+    var weatherFetchUrl = `http://localhost:9999/weather.json?address=${location}`;
+
+    fetch(weatherFetchUrl).then((response) => {
+        return response.json()
+    }).then((weatherResultJson) => {
+        var forecastResult = document.getElementById("forecast-result")
+        forecastResult.style.visibility = "visible"
+        forecastResult.innerHTML = `In <strong>${suburb}</strong> (${mylocation.lat}, ${mylocation.lng}) the weather is <strong>${weatherResultJson.currently.summary}</strong> and the temperature is <strong>${weatherResultJson.currently.temperature}</strong> degrees Celsius.`
+    })
+    */
+
+    var weatherResultJson = {
+        "currently": {
+            "summary": "Sunny",
+            "temperature": 30.51
+        }
+    }
+    var forecastResult = document.getElementById("forecast-result")
+    forecastResult.style.visibility = "visible"
+    forecastResult.innerHTML = `In <strong>${location}</strong> the weather is <strong>${weatherResultJson.currently.summary}</strong> and the temperature is <strong>${weatherResultJson.currently.temperature}</strong> degrees Celsius.`
 }
+
